@@ -11,6 +11,7 @@
 - ls -l -> liệt kê đội dung chi tiết
 - ls -l/ -> liệt kê gốc
 - ls -la -> tương tự 
+- ls /name_file -> liệt kê thư mục chỉ định
 
 ### 2.Thủ thuật gõ lệnh 
 - Dùng các mũi tên lên xuống
@@ -51,3 +52,26 @@
 - :set nu -> cài đặt hiện số dòng trong file vi
 - :set nonu -> bỏ đánh số dòng trong file vi
 
+### 5.Copy , di chuyển và đổi tên file - foder
+> cp -> copy
+> mv -> move(di chuyển )
+>  ***** Cú Pháp *****
+>  Copy
+- cp file_source / file_dict 
+- cp -rv foder_source / foder_dict
+> Đổi tên
+- mv name_file_old name_file_new  và foder tương tự như vậy
+> Di chuyển
+- mv file_source /file_dict với foder tương tự như vậy
+### 📓 Note tùy vào nếu gõ lệnh bị lỗi thì thử bỏ "/" này đi 
+🦫 
+### 6. Đọc nội dung file
+### 📓 Note tùy vào nếu gõ lệnh bị lỗi thì thử bỏ "/" này đi 
+> cat , more ,less(*) ,head ,tail(*) -> * quan trọng
+- cat /file_read -> đọc all content file
+- more /file_read -> đọc từng đoạn và muốn xem thì bấm spack
+- less /file_read -> tùy ý đọc có thể di chuyển lên xuống để đọc và cũng có thể tìm kiếm nữa , muốn thoát thì ấn "q"
+- head /file_read -> đọc đoạn đầu
+- head -n num_row -> đọc số lượng dòng đầu mong muốn 
+- tail /file_read và tail -n num_row -> tương tự như head
+- tail -f /file_read -> giúp đọc file log và giúp fix lỗi
