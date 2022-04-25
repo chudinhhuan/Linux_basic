@@ -50,11 +50,4 @@
 - shift + : -> %s/text_old/text_new/g -> thay thế
 - :set nu -> cài đặt hiện số dòng trong file vi
 - :set nonu -> bỏ đánh số dòng trong file vi
-❤️‍🩹
 
-
-
-
-
-
-- 
