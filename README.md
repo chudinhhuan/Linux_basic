@@ -125,4 +125,4 @@
 - Một file được sở hữu bởi 3 đối tượng : user owner - u , group owner - g và Others - o
 - Lệnh chmod thay đổi quyền
 -  Vidu : chmod u + w abc.txt , chmod g+w abc.txt , chmod o + x abc.txt
-https://drive.google.com/drive/u/0/folders/1fClX9n9H5sKNU48ovsd1cn-MA2mrnER0?fbclid=IwAR05BRrCEIWFRNv_o_Z1HopeNyHYBERsgpbm_z70LV_i-F5AiHR4LDicsTE
+https://prnt.sc/4bKTo95Fpi0d![image]()![image] ()
