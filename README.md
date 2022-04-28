@@ -133,3 +133,18 @@
 > với group owner có read, write, execute : 4+2+1=7,
 > với Others : read, Others : 4+1 =5
 
+## 11. Dữ liệu vào/ ra chuẩn lỗi
+> Nôm na là như lưu input lỗi và không lỗi vào file chứ không hiển thị ra màn hình
+- Chuyển hướng dữ liệu và file
+> stdout > file ,
+> stderr2 > file ,
+> stdout + stderr &> file 
+- VD:
+> ls > stdin.txt -> chuyển hướng file ko lỗi 
+> ls  fileko ton tai 2> stderr.txt 
+> xem lại file cat stderr.txt 
+> Chuyển hướng cả 2 lỗi và không lỗi vào một file : 
+> ls file* afnsafa &> all.txt -> chuyển hướng cả lỗi và ko lỗi vào 1 file
+
+
+
