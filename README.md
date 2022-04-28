@@ -82,4 +82,19 @@
 - theo kích thước -> size
 - theo lịch sử bị thay đổi -> ctime
 > Ví dụ :
-** file / -name name_file
+* find / -name name_file
+* find /etc -name *.config -> tìm theo đuôi
+* find /etc -size 1000k or +1000k or -1000k -> tìm theo kích thước
+* find /etc -ctime -2 -> tìm theo thời gian thay đổi 
+* find /etc -size +1000k name *.bin -ctime -10 -> kết hợp 3 cachs thức tìm kiếm
+
+### 8.Tạo xóa người dùng
+>useradd -> tạo người dùng
+>passwd -> tạo mật khẩu
+>su -> chuyển đổi người dùng
+>userdel -> xóa người dùng
+> note
+> File người dùng và mật khẩu thường được lưu trên:
+- /etc/passwd
+- /etc/shadow 
+- 
