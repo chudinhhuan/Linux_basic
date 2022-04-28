@@ -89,12 +89,40 @@
 * find /etc -size +1000k name *.bin -ctime -10 -> kết hợp 3 cachs thức tìm kiếm
 
 ### 8.Tạo xóa người dùng
->useradd -> tạo người dùng
->passwd -> tạo mật khẩu
->su -> chuyển đổi người dùng
->userdel -> xóa người dùng
-> note
-> File người dùng và mật khẩu thường được lưu trên:
+- useradd -> tạo người dùng
+- passwd -> tạo mật khẩu
+- su -> chuyển đổi người dùng
+- userdel -> xóa người dùng
+- note :
+-  File người dùng và mật khẩu thường được lưu trên:
 - /etc/passwd
 - /etc/shadow 
+> VÍ DỤ
+- less/etc/passwd (thông tin)  và less /etc/shadow (mật khẩu )
+- useradd nguoidung -> tạo người dùng
+- tail -n1 /etc/passwd -> kiểm tra người dùng
+- cat / etc/shadow -> check mật khẩu người dùng
+- passwd nguoidung -> gõ mật khẩu set 
+
+> Ví dụ chuyển người dùng
+- su - nguoidung1 -> chuyển người dùng
+- su - root -> chuyển sang người dùng root -> cần password vì root có đặc quyền cao nhất
+- exit thoát ra khỏi người dùng
+- userdel name_user -> xóa người dùng
+### 9.Thay đổi người / nhóm sở hữu file (chown)
+>chown 
 - 
+>Vi du: 
+- ls -l abc.txt -> thông tin file
+- chown sohuu1 abc.txt -> thay đổi người sở hữu
+- chown .name_group abc.txt -> thay đổi nhóm sở hữu
+- chown name_Sh.name_group abc.txt -> thay đổi cả người sở hữu và nhóm sở hữu
+- chown name_Sh:name_group abc.txt -> thay đổi cả người sở hữu và nhóm sở hữu
+
+### 10.Thay đổi quyền của file  ( chmod)
+>Linux có 3 quyền cơ bản ( read -r , write -w ,execute -x
+- Có 2 cách là bằng chữ và bằng số 
+- Một file được sở hữu bởi 3 đối tượng : user owner - u , group owner - g và Others - o
+- Lệnh chmod thay đổi quyền
+-  Vidu : chmod u + w abc.txt , chmod g+w abc.txt , chmod o + x abc.txt
+https://drive.google.com/drive/u/0/folders/1fClX9n9H5sKNU48ovsd1cn-MA2mrnER0?fbclid=IwAR05BRrCEIWFRNv_o_Z1HopeNyHYBERsgpbm_z70LV_i-F5AiHR4LDicsTE
