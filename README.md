@@ -75,3 +75,11 @@
 - head -n num_row -> đọc số lượng dòng đầu mong muốn 
 - tail /file_read và tail -n num_row -> tương tự như head
 - tail -f /file_read -> giúp đọc file log và giúp fix lỗi
+
+### 7.Tìm kiếm file
+### 3 cách tìm kiếm:
+- theo tên -> name
+- theo kích thước -> size
+- theo lịch sử bị thay đổi -> ctime
+> Ví dụ :
+* file / -name name_file
