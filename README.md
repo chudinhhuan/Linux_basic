@@ -125,4 +125,11 @@
 - Một file được sở hữu bởi 3 đối tượng : user owner - u , group owner - g và Others - o
 - Lệnh chmod thay đổi quyền
 -  Vidu : chmod u + w abc.txt , chmod g+w abc.txt , chmod o + x abc.txt
+> Thay đổi quyền lệnh chmod bằng số
+- read =4, write =2 , excute = 1
+- VÍ dụ :
+> chmod 775 abc.txt
+> với user owner có quyền read, write, execute : 4+2+1=7,
+> với group owner có read, write, execute : 4+2+1=7,
+> với Others : read, Others : 4+1 =5
 
