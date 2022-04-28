@@ -125,4 +125,4 @@
 - Một file được sở hữu bởi 3 đối tượng : user owner - u , group owner - g và Others - o
 - Lệnh chmod thay đổi quyền
 -  Vidu : chmod u + w abc.txt , chmod g+w abc.txt , chmod o + x abc.txt
-https://prnt.sc/4bKTo95Fpi0d![image]()![image] ()
+
