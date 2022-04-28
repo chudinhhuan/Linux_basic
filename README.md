@@ -82,4 +82,4 @@
 - theo kích thước -> size
 - theo lịch sử bị thay đổi -> ctime
 > Ví dụ :
-* file / -name name_file
+** file / -name name_file
