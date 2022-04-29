@@ -146,5 +146,23 @@
 > Chuyển hướng cả 2 lỗi và không lỗi vào một file : 
 > ls file* afnsafa &> all.txt -> chuyển hướng cả lỗi và ko lỗi vào 1 file
 
-- alsnk,fasdfsadf
+## 12. Lệnh đường ống  ( echo ) -pipe command 
+> cho phép kết hợp nhiều lệnh với nhau -> thao tác và xử lý dữ liệu linh hoạt
+- command1 | command2|....command n
+- vd : echo "foo bar baz" | wc -w 
+
+
+## 13. Thao tác dữ liệu bằng grep và cut
+- grep -> lọc dữ liệu theo dòng
+- cut -> lọc dữ liệu theo cột
+
+- vd : grep dinhhuan /etc/paswd  
+-  grep root /etc/paswd
+-  grep -n root /etc/passwd -> xem ở dòng bao nhiêu
+-  grep -i huan /etc/passwd -> tìm cái tên 
+
+- xem nội dung trong file  nào đó  kiểu như ký tự phân cách lấy dữ liệu theo cột hoặc hàng dựa vào ký tự phân cách .
+- cut -d' ' -f2 name_file -> lấy cột 2 
+- cut -d':' -f2 name_file
+
 
