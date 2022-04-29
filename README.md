@@ -165,4 +165,16 @@
 - cut -d' ' -f2 name_file -> lấy cột 2 
 - cut -d':' -f2 name_file
 
+## 14. Tiến trình - Process
+- ps -> xem tiến trình
+- kill pid -> xóa tiến trình
+- vd : kill -9 num_process -> xóa tiến trình
+- vd: ps aux -> liệt kê toàn bộ tiến trình trên hệ thống
+
+## 15. Xem cấu hình CPU , RAM ,HDD
+- cat /proc/cpuinfo -> xem CPU
+- cat /proc/meminfo -> xem RAM
+- free -> xem thông tin về RAM
+- df -h -> xem HDD
+
 
