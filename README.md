@@ -146,5 +146,5 @@
 > Chuyển hướng cả 2 lỗi và không lỗi vào một file : 
 > ls file* afnsafa &> all.txt -> chuyển hướng cả lỗi và ko lỗi vào 1 file
 
-
+- alsnk,fasdfsadf
 
