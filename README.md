@@ -197,4 +197,22 @@
 - vi etc/resolv-conf
 - nameserver 8.8.8.8 -> ping google.com   
 
+## 17.Cài đặt gói tin Linux -rpm ( Red Hat Package ) dùng rpm hoặc yum ( tự động)
 
+- Ví dụ muốn cài 1 file trong http://mirror.centos.org/ lên servers linux 
+- Ta cần cài đặt https://winscp.net/eng/download.php ( WINCP)
+- Vào wincp điền các thông số máy muốn cài vào : host name , port number , user name , password ...
+- sau khi mở wincp  có 2 màn hình windown và linux 
+- kéo file dowload từ windown sang linux bằng cách dùng chuột kéo
+- Setup như sau : rpm -ivh name_file (telnet-0.17....)
+- kiểm tra lại thì gõ name_file
+- rpm -qa | grep từ khóa file
+- gỡ : rpm -e name_file
+
+## 18. 17.Cài đặt gói tin Linux -rpm ( Red Hat Package ) dùng rpm hoặc yum ( tự động) dùng yum
+
+- cd/etc/yum.repos.d/ -> khai báo vị trí servers chứa các file đã cài đặt
+- less CentOS-sources.repo -> xem file đó
+- setup : yum search telnet -> ví dụ cài telnet
+- yum install name_program   -> y -> y ->hoàn thành
+- yum remove name_program -> y -> xóa 
