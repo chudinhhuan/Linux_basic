@@ -72,6 +72,7 @@
 - more /file_read -> đọc từng đoạn và muốn xem thì bấm spack
 - less /file_read -> tùy ý đọc có thể di chuyển lên xuống để đọc và cũng có thể tìm kiếm nữa , muốn thoát thì ấn "q"
 - head /file_read -> đọc đoạn đầu
+
 - head -n num_row -> đọc số lượng dòng đầu mong muốn 
 - tail /file_read và tail -n num_row -> tương tự như head
 - tail -f /file_read -> giúp đọc file log và giúp fix lỗi
@@ -176,5 +177,24 @@
 - cat /proc/meminfo -> xem RAM
 - free -> xem thông tin về RAM
 - df -h -> xem HDD
+
+## 16. Thiết lập cấu hình mạng trên linux - IP v4 
+![image](https://user-images.githubusercontent.com/90398366/166085269-e78dd4e5-c3a8-4804-baf5-ab7f6953342b.png)
+- Lệnh xem địa chỉ mạng : 
+- ip a -> xem địa chỉ ip
+- ip route -> xem defaugateway
+- cat/etc/resolv-conf -> xem DNS
+- /etc/sysconfig/network-scripts : - ifcfg-l0 và - ifcfg-enp0s3
+> demo config ip :
+- B1 :vào /etc/sysconfig/network-scripts 
+- B2:  vi ifcfg-enp0s3
+- B3:  chỉnh BOOTPROTO = static , PEERDNS =no 
+- B4: khai báo : IPADDR=....., NETMASK=..... , GATEWAY=.....
+- B5: lưu -> :wq
+- B6: khởi động lại -> service network restart  -> Thành công  và đăng nhập lại
+
+> Khai báo DNS servers 
+- vi etc/resolv-conf
+- nameserver 8.8.8.8 -> ping google.com   
 
 
