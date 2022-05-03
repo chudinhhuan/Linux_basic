@@ -266,6 +266,27 @@
 - khởi động lệnh reboot
 - getenforce -> kiểm tra lại 
 
-# Mô hình cài đặt ứng dụng WEB ( Apache - Wordpress - Mariadb )
-> 3 thành phần : Apache -> PHP -> MariaDB 
+# 23 . Mô hình cài đặt ứng dụng WEB ( Apache - Wordpress - Mariadb )
+> 3 thành phần : Apache -> PHP -> MariaDB  -> được cài đặt trên 3 server khác nhau để tăng hiệu năng hệ thống
 ![img](https://blog.kdata.vn/wp-content/uploads/2021/06/chi-tiet-cac-buoc-cai-dat-lamp-tren-ubuntu-20-04-lts-300x200.jpg)
+
+- Setup MariaDB 
+![img](https://huongdan.azdigi.com/wp-content/uploads/2020/12/mariadb-vector-logo.png)
+- yum install mariadb-server -> setup
+- systemctl enable mariadb-server -> enable
+- systemctl start mariadb
+- systemctl status mariadb ->active (ok)
+- netstat -tlpn -> check run port 
+> login mariadb 
+- mysql -u root -p (-u user , -p password )
+> tao CSDL wordpress
+- create database wordpress;
+- show databases ;
+> creat user 
+- create user wpuser@localhost identified by 'password'
+> Gán các quyền của database wp cho người dùng
+- grant all privileges on wordpress.* to wpuser@localhost;
+> Cập nhật mariadb quyên người dùng
+- plush privileges;
+- use mysql -> show tables -> select user from user; ( lấy user trong bản user trong csdl mysql )
+
