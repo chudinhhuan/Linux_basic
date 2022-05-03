@@ -209,10 +209,48 @@
 - rpm -qa | grep từ khóa file
 - gỡ : rpm -e name_file
 
-## 18. 17.Cài đặt gói tin Linux -rpm ( Red Hat Package ) dùng rpm hoặc yum ( tự động) dùng yum
+## 18.Cài đặt gói tin Linux -rpm ( Red Hat Package ) dùng rpm hoặc yum ( tự động) dùng yum
 
 - cd/etc/yum.repos.d/ -> khai báo vị trí servers chứa các file đã cài đặt
 - less CentOS-sources.repo -> xem file đó
 - setup : yum search telnet -> ví dụ cài telnet
 - yum install name_program   -> y -> y ->hoàn thành
 - yum remove name_program -> y -> xóa 
+
+## 19 . Thiết lập cấu hình mạng IP v4 trên Linux
+- Các lệnh xem địa chỉ mạng : ip a -> xem địa chỉ ip v4 , ip route -> xem địa default gateway , cat/etc/resolv.conf -> khai bao DNS server 
+- /etc/sysconfig/network-scripts : ifcfg-lo and ifcfg-enp0s3 -> cạc mạng
+> vd đổi địa chỉ ip 
+- cd /etc/sysconfig/network-scripts 
+- vi ifcfg-enp0s3 
+- sửa đổi các thông số : bootproto = "stastic" , peerdns = "no" , khai báo ipaddr = 192.168.1.1 , netmask = 255.255.255.0, gateway = 192.168.1.1
+- service network restart -> reset lại mạng
+- đăng nhập và kiểm tra -> ip a 
+
+## 20 .Các lệnh troubleshoot mạng cơ bản   - ip a , ping , nslookup ,telnet
+> các lệnh này giúp kiểm tra kết nối mạng để nhằm khắc phục sự cố cho máy chủ
+- yum install bind-utils -> setup gói tin chứa lệnh nslookup -> tra cứu các bản ghi DNS xem trả về ip address không 
+- yum install telnet -y -> setup lệnh telnet
+- telnet vnexpress.net 80  -> check chạy dịch vụ HTTP
+- thoat : "ctrl" + "]" -> quit
+
+# NOTE Back root : su -> input password
+## 21 Cài đặt Iptables và thiết lập luật firewall cơ bản
+- Framework lọc gói tin là netfilter ( theo IP và Port )
+- Disable firewalld
+> Các lệnh
+- rpm -qa | grep firewalld -> check filewalld^c
+- systemctl stop fire
+- systemctl disable firewalld^c
+- rpm -qa | grep iptables -> check xem iptable 
+-  yum install iptables -services -> cài đặt iptables
+-  systemctl enable iptables -> cài dịch vụ iptables
+-  systemctl start iptables -> bật
+-  systemctl status iptables -> xem kích hoạt chưa
+-  iptables -L -> xem bản ip tables
+> Cài dịch vụ http  -> mở port 80 trên iptables 
+- vi etc/sysconfig/iptables ->copy dòng có :  dport 22
+- "ii" + "p" kéo tới 22 thay băng 80 -> chấp nhận cổng 80 mở
+- :wq -> lưu lại và thoát
+- systemctl restart iptables -> khởi động lại 
+- iptables -L -> kiểm tra 
