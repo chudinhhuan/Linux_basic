@@ -250,7 +250,22 @@
 -  iptables -L -> xem bản ip tables
 > Cài dịch vụ http  -> mở port 80 trên iptables 
 - vi etc/sysconfig/iptables ->copy dòng có :  dport 22
-- "ii" + "p" kéo tới 22 thay băng 80 -> chấp nhận cổng 80 mở
+- "ii" + "p" kéo tới 22 thay băng 80 -> chấp nhận cổng 80 mở (http)
 - :wq -> lưu lại và thoát
 - systemctl restart iptables -> khởi động lại 
 - iptables -L -> kiểm tra 
+## 22. Tắt SELinux - Security Enhanced Linux (bảo mật )
+- SELINUX = disabled  
+- /etc/sysconfig/selinux
+> Cách làm : 
+- getenforce -> check SELinux -> Enforcing -> on
+- setenforce 0 -> off -> status - Permissive(disabled)
+> OFF tuyet doi bang cach 
+- vi /etc/sysconfig/selinux 
+- tìm dòng SELINUX = enforcing edit -> disabled -> OFF
+- khởi động lệnh reboot
+- getenforce -> kiểm tra lại 
+
+# Mô hình cài đặt ứng dụng WEB ( Apache - Wordpress - Mariadb )
+> 3 thành phần : Apache -> PHP -> MariaDB 
+![img](https://blog.kdata.vn/wp-content/uploads/2021/06/chi-tiet-cac-buoc-cai-dat-lamp-tren-ubuntu-20-04-lts-300x200.jpg)
