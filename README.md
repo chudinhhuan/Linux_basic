@@ -279,7 +279,7 @@
 - netstat -tlpn -> check run port 
 > login mariadb 
 - mysql -u root -p (-u user , -p password )
-> tao CSDL wordpress
+### tao CSDL wordpress
 - create database wordpress;
 - show databases ;
 > creat user 
